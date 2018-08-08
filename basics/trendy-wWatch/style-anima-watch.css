@@ -1,0 +1,62 @@
+#watch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url('img/world2.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+#secondsPoint {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: url('img/satellite2.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+#minutesPoint {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: url('img/satellite2.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+#hoursPoint {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: url('img/satellite2.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+#time {
+    position: absolute;
+}
+
+#degrees {
+    position: absolute;
+    top: 30px;
+}
+
+#position {
+    position: absolute;
+    top: 50px;
+}
+

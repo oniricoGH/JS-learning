@@ -3,7 +3,7 @@
 	<head>
 		<title>Hello Perico</title>
 	</head>
-	<body>
+	<body onload="outputBOM()">
 		<h1>Ejemplos básicos de JS</h1>
 		<p id="fparagraph">Mi primera página con JS, así de simple</p>
         <button onclick="buttonFunction()">Plof!</button>
@@ -17,6 +17,18 @@
         <button id="button-result" onclick="funcioncalculadora('=')">=</button>
         <button id="button-clr" onclick="funcioncalculadora('c')">c</button>
         <div id="result" style="text-decoration: underline; max-width: 50px;"></div>
+        
+        <p id="bom"></p>
+        
+        <h2>ajax xml data test</h2>
+        <button onclick="loadXml()">Carga datos xml</button>
+        <table id="ajaxData"></table>
+        
+        <h2>ajax json data test</h2>
+        <p id="jsonData"></p>
+        <button onclick="loadJson()">Carga datos json</button>
+        <p id="jsonData2"></p>
+        
         
         <script src="js/newinjs.js"></script>
         <script src="js/simplecalculator.js"></script>

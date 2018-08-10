@@ -39,7 +39,7 @@ function secondsFrame () {
     
     // update output data
     document.getElementById("time").innerHTML = the_date.getHours() + ":" + the_date.getMinutes() + ":" + the_date.getSeconds();
-    document.getElementById("degrees").innerHTML = "Degrees in sphere: " + degrees +"º";
+    document.getElementById("degrees").innerHTML = "Degrees in sphere: " + degrees +"deg.";
     document.getElementById("position").innerHTML = "X-abs-pos: " + x_pos.toFixed(2) + "px <br /> Y-abs-pos: " + y_pos.toFixed(2) + "px";   
 }
 
@@ -62,16 +62,18 @@ function updateMinute () {
     minutes_point.style.top = y_pos +"px";
     minutes_point.style.left = x_pos +"px";
     
-    if(degrees===0)
+    if(degrees===90)
         updateHour();
 }
 
 function updateHour () {
-            
+
     var the_date = new Date();
     var degrees = undefined;
     var x_pos = undefined;
     var y_pos = undefined;
+    
+    console.log("now update hour to "+the_date.getHours());
     
     degrees = hours_conversion[the_date.getHours()];
     x_pos = calculateXpos(degrees, 100);
@@ -99,7 +101,7 @@ function calculateXpos(degrees, offset) {
 function calculateYpos(degrees, offset) {
     var res = degrees * (Math.PI/180);
     res = Math.sin(res) * (watch_radius + offset);
-    return res; 
+    return res;
 }
 
 (function setInitCss () {

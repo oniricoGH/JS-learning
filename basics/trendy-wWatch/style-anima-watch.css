@@ -1,3 +1,24 @@
+body {
+    margin: 0px;
+}
+
+p {
+    color: white;
+}
+
+#pageMain {
+    background-image: url('img/stars.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+
 #watch {
     position: absolute;
     left: 0;
@@ -47,16 +68,20 @@
 }
 
 #time {
-    position: absolute;
 }
 
 #degrees {
-    position: absolute;
-    top: 30px;
 }
 
 #position {
-    position: absolute;
-    top: 50px;
 }
 
+#moreInfo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: dimgrey;
+    padding: 10px;
+    border-radius: 5px;
+    radius: 3px solid black;
+}

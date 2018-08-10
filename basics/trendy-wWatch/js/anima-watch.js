@@ -2,7 +2,8 @@
 
 const watch_radius = 150;
 const seconds_point_radius = 20;
-const x_offset = 250;
+//const x_offset = 540;
+var x_offset = centerEarth();
 const y_offset = 100;
 
 const degrees_conversion = [90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 30, 24, 18, 12, 6, 0, 354, 348, 342, 336, 330, 324, 318, 312, 306, 300, 294, 288, 282, 276, 270, 264, 258, 252, 246, 240, 234, 228, 222, 216, 210, 204, 198, 192, 186, 180, 174, 168, 162, 156, 150, 144, 138, 132, 126, 120, 114, 108, 102, 96];
@@ -102,6 +103,16 @@ function calculateYpos(degrees, offset) {
     var res = degrees * (Math.PI/180);
     res = Math.sin(res) * (watch_radius + offset);
     return res;
+}
+
+function centerEarth() {
+    var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth;
+    console.log (x);
+    return 0.4*x;
 }
 
 (function setInitCss () {

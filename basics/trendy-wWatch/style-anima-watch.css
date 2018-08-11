@@ -1,37 +1,54 @@
+* {
+    box-sizing: border-box;
+}
 body {
-    margin: 0px;
-}
-
-p {
+    margin: 0px; 
+    padding: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: white;
-}
-
-#pageMain {
     background-image: url('img/stars.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: red;
-    height: 100vh;
+    background-repeat: repeat;
+    animation: animatedBackground 500s linear infinite;
+}
+h1 {
+    font-weight: normal;
+    color: yellow;
+}
+#main {
+    background-color: yellow;
     width: 100vw;
     left: 0px;
     position: absolute;
     top: 0px;
-    z-index: 10;
 }
-
+#titleSection {
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
 #watch {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -500px;
+    top: 0px;
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-image: url('img/world2.png');
+    background-image: url('img/earth-rotating.gif');
     background-repeat: no-repeat;
     background-position: center; 
 }
-
-#secondsPoint {
+#secondPoint {
+    position: absolute;
+    left: -100px;
+    top: 0px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: url('img/satellite2.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+#minutePoint {
     position: absolute;
     left: -100px;
     top: 0;
@@ -42,8 +59,7 @@ p {
     background-repeat: no-repeat;
     background-position: center; 
 }
-
-#minutesPoint {
+#hourPoint {
     position: absolute;
     left: -100px;
     top: 0;
@@ -54,34 +70,57 @@ p {
     background-repeat: no-repeat;
     background-position: center; 
 }
-
-#hoursPoint {
+#watchInfo {
     position: absolute;
-    left: -100px;
-    top: 0;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-image: url('img/satellite2.png');
-    background-repeat: no-repeat;
-    background-position: center; 
-}
-
-#time {
-}
-
-#degrees {
-}
-
-#position {
-}
-
-#moreInfo {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    background-color: dimgrey;
+    top: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: none;
     padding: 10px;
-    border-radius: 5px;
-    radius: 3px solid black;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+#plainTime {
+    font-size: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#moreInfoButton {
+    font-size: 22px;
+    background: none;
+    border: 3px solid white;
+    padding: 5px;
+    color: white;
+
+}
+#moreInfoSection {
+    display: none;
+    color: red;
+}
+.row {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    text-align: center;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
 }

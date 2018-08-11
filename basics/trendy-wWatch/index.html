@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Analogic trendy wWatch!</title>
     <link rel="stylesheet" href="style-anima-watch.css">
   </head>
   <body>
-    <div id="pageMain">
+    <div id="main">
         <div id="watch"></div>
-        <div id="secondsPoint"></div>
-        <div id="minutesPoint"></div>
-        <div id="hoursPoint"></div>
+        <div id="secondPoint"></div>
+        <div id="minutePoint"></div>
+        <div id="hourPoint"></div>
         
-        <div id="moreInfo">
-            <p id="time"></p>
-            <p id="degrees"></p>
-            <p id="position"></p>
+        <div id="watchInfo">
+            <h1>SatWatch</h1>
+            <p id="plainTime"></p>
+            <button onclick="document.getElementById('moreInfoSection').style.display = 'block'" id="moreInfoButton">MORE INFO</button>
+            <div id="moreInfoSection" class="row">
+            <div id="sPos" class="column"></div>
+            <div id="mPos" class="column"></div>
+            <div id="hPos" class="column"></div>
+                </div>
         </div>
+        
     </div>
-    <script src="js/anima-watch.js"> </script>
+    <script src="js/anima-watch2.js"> </script>
   </body>
 </html>

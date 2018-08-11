@@ -11,9 +11,9 @@ const degrees_conversion = [90, 84, 78, 72, 66, 60, 54, 48, 42, 36, 30, 24, 18, 
 const hours_conversion = [90, 60, 30, 0, 330, 300, 270, 240, 210, 180, 150, 120, 90, 60, 30, 0, 330, 300, 270, 240, 210, 180, 150, 120];
 
 var watch = document.getElementById("watch");
-var seconds_point = document.getElementById("secondsPoint");
-var minutes_point = document.getElementById("minutesPoint");
-var hours_point = document.getElementById("hoursPoint");
+var seconds_point = document.getElementById("secondPoint");
+var minutes_point = document.getElementById("minutePoint");
+var hours_point = document.getElementById("hourPoint");
 var animation = setInterval(secondsFrame,1000);
 
 function secondsFrame () {
@@ -39,9 +39,7 @@ function secondsFrame () {
     }
     
     // update output data
-    document.getElementById("time").innerHTML = the_date.getHours() + ":" + the_date.getMinutes() + ":" + the_date.getSeconds();
-    document.getElementById("degrees").innerHTML = "Degrees in sphere: " + degrees +"deg.";
-    document.getElementById("position").innerHTML = "X-abs-pos: " + x_pos.toFixed(2) + "px <br /> Y-abs-pos: " + y_pos.toFixed(2) + "px";   
+    document.getElementById("plainTime").innerHTML = the_date.getHours() + ":" + the_date.getMinutes() + ":" + the_date.getSeconds();
 }
 
 function updateMinute () {
@@ -127,6 +125,7 @@ function centerEarth() {
     secondsFrame ();
     updateMinute ();
     updateHour ();
+
     
 })();
 

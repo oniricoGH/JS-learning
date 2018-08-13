@@ -101,6 +101,21 @@ function setInit () {
     updateTime();
 }
 
+/* NOT WORKING
+function togglInfo () {
+    var info = document.getElementById("moreInfoSection");
+    console.log(info.style.display);
+    
+    if (info.style.display === "none") {
+        info.style.display = "block";
+    }
+    else if (info.style.display === "block") {
+        info.style.display = "none";
+
+    }
+}
+*/
+
 setInit();
 window.addEventListener('resize', setInit);
 

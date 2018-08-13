@@ -1,0 +1,13 @@
++++++++++++++++
+++ More info ++
++++++++++++++++
+
+What to improve?
+
+- Add orbits.
+- Adjust hour hand according to minute hand position.
+- Buttons to change planet, hand points and background.
+- Adapt better to mobile version.
+- Change universe background and earth rotation.
+
+

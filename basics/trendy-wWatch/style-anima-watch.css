@@ -8,7 +8,7 @@ body {
     color: white;
     background-image: url('img/stars.jpg');
     background-repeat: repeat;
-    animation: animatedBackground 500s linear infinite;
+    animation: animatedBackground 1000s linear infinite;
 }
 h1 {
     font-weight: normal;

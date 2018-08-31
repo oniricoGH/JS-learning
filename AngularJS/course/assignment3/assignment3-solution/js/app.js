@@ -11,7 +11,11 @@ angular.module('NarrowItDownApp',[])
 function FoundItemsDirective() {
     var ddo = {
         //template: '{{ item.name }} ({{item.short_name}}): {{ item.description}}',
-        templateUrl: 'foundItems.html'
+        templateUrl: 'foundItems.html',
+        scope: {
+          list: '<',  //same name in template and html
+          onRemove: '&'
+        }
     };
     
     return ddo;

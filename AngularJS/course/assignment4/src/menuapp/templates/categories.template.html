@@ -1,6 +1,6 @@
 <p>Category inner template</p>
 <ul>
   <li ng-repeat="category in $ctrl.categories">
-    {{ category.name }} ({{ category.short_name }})
+      <a ui-sref="listItems({shortCategory:'{{category.short_name}}'})"><strong>{{ category.short_name }}</strong>: {{ category.name }}</a>
   </li>
 </ul>

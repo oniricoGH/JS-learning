@@ -10,7 +10,6 @@ MenuDataService.$inject = ['$http','categoriesUrl','itemsUrl'];
 function MenuDataService ($http,categoriesUrl,itemsUrl){
     var menuData = this;    
     menuData.getAllCategories = function (){
-        // return a promise
         // return a promise    
         return $http({
             url: categoriesUrl
@@ -18,7 +17,10 @@ function MenuDataService ($http,categoriesUrl,itemsUrl){
     };
     
     menuData.getItemsForCategory = function (categoryShortName) {
-    // return a promise result of $http    
+    // return a promise
+        return $http({
+            url: itemsUrl+categoryShortName
+        });
     };
 }    
 

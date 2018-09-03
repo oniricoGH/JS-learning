@@ -18,16 +18,25 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     url: '/',
     templateUrl: 'src/menuapp/templates/home.template.html'
   })
-    
   // Premade categories page
   .state('listCategories', {
     url: '/categories',
     templateUrl: 'src/menuapp/templates/main-categories.template.html',
-    controller: 'MenuAppController as ctrl',
+    controller: 'categoriesController as ctrl',
     resolve: {
-      categories: ['MenuDataService', function (MenuDataService) {
-        var promise = MenuDataService.getAllCategories();
-        return promise;
+      categoriesRequest: ['MenuDataService', function (MenuDataService) {
+        return MenuDataService.getAllCategories();
+      }]
+    }
+  })
+  // $stateParams is a service to retrieve parameters
+  .state('listItems', {
+    url: '/items/{shortCategory}',
+    templateUrl: 'src/menuapp/templates/main-items.template.html',
+    controller: 'itemsController as ctrl',
+    resolve: {
+        itemsRequest: ['$stateParams','MenuDataService', function ($stateParams, MenuDataService) {
+        return MenuDataService.getItemsForCategory($stateParams.shortCategory);
       }]
     }
   });
